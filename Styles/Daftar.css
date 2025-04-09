@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: light;
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/Resources/masukBackground.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    width: 500px;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(24, 26, 28, 0.8);
+    color: #ffffff;
+}
+
+.wrapper .logo {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+
+.wrapper .daftar {
+    text-align: center;
+    margin-top: 37px;
+}
+
+.wrapper .daftar h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+}
+
+.wrapper .input-box input {
+    width: 100%;
+    height: 80%;
+    padding: 0 15px;
+    background: transparent;
+    border-radius: 24px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.wrapper .input-box .hide-password {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.wrapper .input-box p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.wrapper .input-box input::placeholder {
+    color: #C1C2C4;
+}
+
+.wrapper .sudah-daftar {
+    display: flex;
+    text-align: left;
+    color: #C1C2C4;
+}
+
+.wrapper .sudah-daftar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.wrapper .sudah-daftar a:hover {
+    text-decoration: underline;
+}
+
+.wrapper  .btn {
+    width: 100%;
+    height: 40px;
+    background: #3D4142;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.wrapper .btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    color: #ffffff;
+}
+
+.wrapper .btn-google img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.wrapper button:hover {
+    cursor: pointer;
+}
+
+.wrapper .tombol-daftar p {
+    text-align: center;
+    font-size: 14px;
+    color: #C1C2C4;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .wrapper .daftar h1 {
+        font-size: 24px;
+    }
+
+    .wrapper .input-box input {
+        height: 40px;
+    }
+
+    .wrapper .btn, .wrapper .btn-google {
+        height: 35px;
+    }
+    .wrapper .sudah-daftar {
+        display: flex;
+        justify-content: space-between;
+    }
+}
