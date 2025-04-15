@@ -1,11 +1,9 @@
 * {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    color: #FAF5EF;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    font-weight: light;
-    font-size: 16px;
-    color: #FAF5EF
 }
 
 body {
@@ -14,147 +12,106 @@ body {
     background-color: #22282A;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 15px 50px;
-    background-color: #22282A;
-    width: 100%;
+    background: #22282A;
+    padding: 10px 40px;
 }
 
-header .logo {
-    width: auto;
-    height: 30px;
+header a {
+    text-decoration: none;
 }
 
-header .profile-icon {
+.header-container {
+    font-size: 18px;
+    margin-left: 0;
+}
+
+.header-container a {
+    margin: 0 20px;
+}
+
+.header-container a:hover {
+    color: #C1C2C4;
+}
+
+.header-logo {
+    margin-right: 40px;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+.header-profile {
     display: flex;
     align-items: center;
     margin-left: auto;
+    margin-right: 0;
 }
 
-.profile-icon-img {
-    width: auto;
-    height: 30px;
-}
-
-.arrow-down {
-    width: auto;
-    height: 25px;
-    margin-left: 5px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin-left: 40px;
-}
-
-nav ul li {
-    margin: 0 30px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #FAF5EF;
-    font-size: 18px;
-    line-height: 40px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #22282A;
-    padding: 15px 50px; 
-    color: #FAF5EF;
-    border-top: 1px solid #C1C2C4;
-}
-
-.footer-content {
-    display: grid;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
-
-.footer-logo-section {
-    flex: 1; 
-    min-width: 150px; 
-}
-
-.footer-logo {
-    height: 30px; 
-    width: auto;
-    margin-bottom: 10px; 
-}
-
-.footer p {
-    margin: 0; 
-    font-size: 16px; 
-    color: #C1C2C4;
-}
-
-.movies-categories, .bantuan {
-    flex: 2; 
-    min-width: 200px; 
-}
-
-.movies-categories h3,
-.bantuan h3 {
-    font-size: 16px; 
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-.movies-categories ul,
-.bantuan ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-rows: repeat(4, auto);
-    grid-auto-flow: column;
-    gap: 5px 20px; 
-    text-align: left;
-}
-
-.movies-categories ul li a,
-.bantuan ul li a {
-    text-decoration: none;
-    color: #C1C2C4;
-    font-size: 16px; 
-}
-
-.movies-categories ul li a:hover,
-.bantuan ul li a:hover {
-    text-decoration: underline;
-}
-
-
-.main-page h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-
-.hero-section {
-    position: relative;
-    color: #FAF5EF;
+.profile-dropdown {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 70vh;
-    overflow: hidden;
+    gap: 10px;
 }
 
-.hero-section::after {
-    content: "";
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -90px;
+    top: 40px;
+    border-radius: 10px;
+    background-color: #22282A;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #FAF5EF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.content-item i {
+    margin-right: 10px;
+}
+
+.content-item:hover i,
+.content-item:hover span {
+    color: #0367DB;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Header */
+
+/* Body */
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -162,132 +119,130 @@ footer {
     height: 100%;
     background: linear-gradient(to top, #22282A, transparent); /* Gradient from bottom to transparent */
 }
-  
-.hero-text {
-    margin: 20px 0;
-    padding: 10px 50px;
-    position: absolute;
-    bottom: 8px;
-    left: 12px;
-    font-size: 20px;
-    max-width: 70%;
-    z-index: 1;
-}
 
-.hero-text h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 10px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-  
-.hero-section img {
+.hero-image {
     width: 100%;
     height: auto;
     object-fit: cover;
+    object-position: center;
 }
 
-.hero-section .button-container {
+.hero-content {
+    position: absolute;
+    bottom: 20%;
+    max-width: 80%;
+    left: 0px;
+    padding: 0 40px;
+    margin: 15px 0;
+}
+
+.hero-title {
+    font-size: 5vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-description {
+    font-size: 1.5em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 90px;
+    width: 100%;
+    padding: 0 40px;
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
-    margin-top: 15px;
+}
+
+.button-container button {
+    padding: 10px 15px;
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    cursor: pointer;
     font-size: 16px;
 }
 
-.hero-section button {
-    padding: 10px 15px;
+.button-mulai button{
     background: #0586FF;
-    border-radius: 24px;
-    border: none;
-    color: #FAF5EF;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
+    margin-left: 0;
 }
 
-.hero-section .selengkapnya-button {
-    background: #3D4142;
-    border-radius: 24px;
-    color: #ffffff;
-    gap: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-text .rate18 {
-    border: 1px solid #C1C2C4;
-    border-radius: 20px;
-    padding: 10px 8px;
-    font-size: 14px;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-}
-
-.mute-icon {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
-}
-
-.hero-section .mulai-button:hover{
+.button-mulai button:hover{
     background: #0367DB;
-    cursor: pointer;
 }
 
-.hero-section .selengkapnya-button:hover{
+.button-selengkapnya button{
+    background: #3D4142;
+}
+
+.button-selengkapnya button:hover{
     background: #36393a;
-    cursor: pointer;
 }
 
-.lanjut-nonton, .film-terbaru, .film-trending, .rilis-baru {
-    position: relative;
-    display: block;
-    align-items: center;
-    margin: 50px 0;
-    padding: 10px 50px;
+.age-rating {
+    border-radius: 20px;
+    border: 1px solid #C1C2C4;
+    padding: 10px 10px;
+    font-size: 14px;
+    color: #C1C2C4;
+
 }
+
+.button-mute {
+    border-radius: 50%;
+    border: 1px solid #C1C2C4;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.button-mute:hover {
+    background: #3D4142;
+}
+/* Hero Section */
+
+/* Main Content */
+.main-section {
+    padding: 0 40px;
+}
+
+.main-section > div {
+    margin: 20px 0;
+}
+
 
 .film-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
+    position: relative;
+    align-items: center;
 }
 
 .film-card {
     flex: 1 1 calc(20% - 20px);
-    max-width: calc(25% - 20px);
-    box-sizing: border-box;
-    border-radius: 10px;
-    position: relative;
-    margin-top: 10px;
+    max-width: 100%;
     cursor: pointer;
+    margin: 10px 0;
+    position: relative;
 }
 
 .film-card::after {
     content: "";
     position: absolute;
     bottom: 4px;
-    left: 0;
     width: 100%;
-    height: 30%;
+    height: 50%;
     background: linear-gradient(to top, 
         rgba(0, 0, 0, 0.5) 0%, 
         rgba(0, 0, 0, 0.25) 40%, 
@@ -295,11 +250,16 @@ footer {
     border-radius: 10px;
 }
 
+.film-card:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
 .film-card img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
 }
+
 
 .film-info h3, .film-info p {
     font-size: 1em;
@@ -313,7 +273,7 @@ footer {
     bottom: 10px;
     left: 10px;
     max-width: 70%;
-    white-space: nowrap;
+    text-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 1.2rem;
@@ -333,7 +293,7 @@ footer {
     left: 10px;
     font-size: 14px;
     filter: drop-shadow(0 0 10px rgb(51, 51, 51));
-}   
+}
 
 .top-10 {
     background: #d32f2f;
@@ -350,56 +310,292 @@ footer {
 
 .prev-button,
 .next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 50%; 
-    transform: translateY(50%);
-    background-color: #3D4142;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #3d4142aa;
     border: 1px solid #C1C2C4;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    z-index: 2;
-}
-
-.prev-button {
-    left: 30px; 
-}
-
-.next-button {
-    right: 30px;
+    z-index: 1;
 }
 
 .prev-button:hover,
 .next-button:hover {
-    background-color:#36393a;
+    background-color: #3d4142;
 }
 
-@media (max-width: 768px) {
-   /*Footer*/
-    footer {
-        padding: 15px 20px; 
+.prev-button {
+    left: -20px; 
+}
+
+.next-button {
+    right: -20px;
+}
+/* Main Content */
+/* Body */
+
+
+/* Footer */
+footer {
+    background: #22282A;
+    padding: 20px 40px;
+    border-top: 1px solid #C1C2C4;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container {
+    padding: 10px 0;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.footer-logo img {
+    align-self: start;
+}
+
+.footer-logo p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer-container h3 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.footer-container ul {
+    list-style: none;
+    display: grid; 
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+}
+
+.footer-container ul li {
+    margin: 10px 10px;
+}
+
+.movies-categories ul{
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+}
+
+.footer-container button {
+    display: none;
+}
+/* Footer */
+    
+
+
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 0 20px;
     }
 
-    .footer-content {
-        grid-template-columns: repeat(1, 1fr); 
+    .header-container {
+        margin-left: 0;
+        font-size: 14px;
+    }
+    .header-container a {
+        margin: 0 10px;
     }
 
-    .footer-logo-section {
-        flex: 1; 
-        min-width: 100%; 
+    .header-logo {
+        margin-right: 20px;
     }
 
-    .movies-categories, .bantuan {
-        flex: 1; 
-        min-width: 100%; 
-    }
-
-    .movies-categories ul li,
-    .bantuan ul li {
+    .logo {
         display: none;
     }
+
+    .logo-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: auto;
+    }
+
+    .logo-mobile img {
+        width: 100%;
+        height: auto;
+    }
+
+    .header-profile img {
+        width: 30px;
+        height: auto;
+    }
+    /*Header */
+
+    /* Body */
+    /* Hero Section */
+    .hero-section {
+        height: 30vh;
+    }
+
+    .hero-content {
+        position: absolute;
+        bottom: 60px;
+        max-width: 90%;
+        padding: 0 20px;
+        margin: 0;
+    }
+    
+    .hero-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .hero-description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .button-container {
+        position: absolute;
+        bottom: 20px;
+        gap: 5px;
+        padding: 0 20px;
+    }
+
+    .button-container button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .age-rating {
+        font-size: 12px;
+        padding: 5px 5px;
+    }
+
+    .button-mute {
+        padding: 5px;
+        font-size: 12px;
+    }
+    /* Hero Section */
+    /* Main Content */
+    .main-section {
+        padding: 0 0 0 20px;
+    }
+
+    .main-section > div > h2 {
+        font-size: 18px;
+    }
+
+    .film-info span {
+        font-size: 0.6em;
+    }
+    
+    .film-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .film-row::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .lanjut-nonton .film-row > div {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+
+    .film-row > div {
+        flex: 0 0 auto;
+        max-width: calc(31% - 20px);
+    }
+
+    .episode-baru {
+        font-size: 12px;
+        padding: 2.5px 5px;
+        left: 5px;
+    }
+
+    .top-10 {
+        font-size: 12px;
+        padding: 5px 0;
+        width: 20px;
+        right: 5px;
+    }
+
+    .prev-button,
+    .next-button {
+        display: none;
+    }
+    /* Main Content */
+    /* Body */
+
+    /* Footer */
+    footer {
+        background: #22282A;
+        padding: 20px 40px;
+        border-top: 1px solid #C1C2C4;
+    }
+    
+    .footer-container {
+        display: block;
+    }
+
+    .footer-logo {
+        margin-bottom: 40px;
+    }
+
+    .footer-logo img {
+        width: 30%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .footer-container h3 {
+        margin: 0;
+    }
+    
+    .footer-container ul {
+        list-style: none;
+        display: none;
+    }
+
+    .bantuan, .movies-categories {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .footer-container button {
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        font-size: 16px;
+    }
+
+    
+    /* Footer */
+    
 }
